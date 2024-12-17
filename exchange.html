@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+      /* background-color: #4CAF50; */
+      background-color: #87CEEB;
+      color: white;
+      padding: 10px 20px;
+      border-bottom: 3px groove midnightblue;
+
+    }
+
+    .mainheading {
+      font-size: xx-large;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: left;
+      padding-left: 0px;
+      padding: 10px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -40px;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+      margin-right: 20px;
+
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      /* font-size: 1rem; */
+      transition: color 0.3s;
+      font-size: medium;
+
+    }
+
+    .navbar ul li a:hover {
+      background-color: rgb(14, 55, 104);
+      padding: 3px;
+      border-radius: 5px;
+    }
+
+        /* Contact Us Styles */
+        .contact-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-title {
+            font-size: x-large;
+            color: rgb(14, 55, 104);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: medium;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 10px;
+            font-size: medium;
+            border: 2px solid midnightblue;
+            border-radius: 5px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: midnightblue;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #87CEEB;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: medium;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: midnightblue;
+        }
+
+        .preferred-material {
+            font-size: medium;
+            color: rgb(14, 55, 104);
+            margin-top: 20px;
+        }
+
+        .preferred-material ul {
+            list-style: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="mainheading">
+                Kitaab <span style="color: midnightblue; margin-left: 1%;">Junction</span>
+            </h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="exchange.html">EXCHANGE</a></li>
+                    <li><a href="categories.html">CATEGORIES</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="datetime-column" style="border: 2px solid midnightblue; padding: 10px; margin: 20px; border-radius: 8px; background-color: aliceblue; color: midnightblue; text-align: center;">
+        <h2>Current Date and Time</h2>
+        <p id="datetime"></p>
+      </div>
+      
+
+    <div class="container contact-container">
+        <h2 class="contact-title">Sell Your Used Books</h2>
+        <form class="contact-form">
+
+            <div class="form-group">
+              <h3>Book Details:</h3>
+                <input type="radio" id="manual-entry" name="book-details" value="manual">
+                <label for="manual-entry">Enter book details manually</label>
+                <input type="radio" id="isbn-entry" name="book-details" value="isbn" checked>
+                <label for="isbn-entry">Automatically; by just typing the ISBN number</label>
+            </div>
+
+            <div class="form-group">
+                <label for="isbn">ISBN</label>
+                <input type="text" id="isbn" name="isbn" placeholder="Enter 13-digit ISBN number"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="book-type">Book Type</label>
+                <select id="book-type" name="book-type">
+                  <option value="fiction">Fictional</option>
+                  <option value="non-fiction">Crime, Thiller and Mystery</option>
+                  <option value="textbooks">Children</option>
+                  <option value="magazines">Space Exploration and Sci-fi</option>
+                  <option value="magazines">Religion  and Sprituality</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Book Condition (Used)</label>
+                <input type="radio" id="condition-excellent" name="condition" value="excellent">
+                <label for="condition-excellent">Excellent</label>
+                <input type="radio" id="condition-good" name="condition" value="good">
+                <label for="condition-good">Good</label>
+                <input type="radio" id="condition-fair" name="condition" value="fair">
+                <label for="condition-fair">Fair</label>
+            </div>
+
+            <div class="form-group">
+                <label for="upload-photos">Upload Photos</label>
+                <input type="file" id="upload-photos" name="upload-photos" multiple>
+                <p class="preferred-material">Buyers trust real images of your book. Snap and upload your book's actual photos; avoid using internet-downloaded cover photos!</p>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity Available (Stock)</label>
+                <input type="number" id="quantity" name="quantity" value="1">
+            </div>
+
+            <h3>Pricing Details:</h3>
+
+            <div class="form-group">
+                <label for="price">Your Price (₹)</label>
+                <input type="number" id="price" name="price" placeholder="Enter your ad price">
+            </div>
+
+            <div class="form-group">
+                <label>Shipping Charges</label>
+                <input type="number" id="shipping-charges" name="shipping-charges" placeholder="Enter your shipping charges to buyer">
+                <input type="checkbox" id="free-shipping" name="free-shipping">
+                <label for="free-shipping">Free Shipping</label>
+            </div>
+
+            <div class="form-group">
+                <label for="payment-mode">Preferred Payment Mode</label>
+                <input type="radio" id="payment-upi" name="payment-mode" value="upi">
+                <label for="payment-upi">UPI Number</label><br>
+                <input type="radio" id="payment-bank" name="payment-mode" value="bank">
+                <label for="payment-bank">Bank Account</label>
+            </div>
+
+            <h3>Your Details:</h3>
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number (WhatsApp only)</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                <input type="checkbox" id="keep-private" name="keep-private" checked>
+                <label for="keep-private">Keep my phone number private.</label>
+            </div>
+
+            <div class="form-group">
+                <label for="pincode">Pincode</label>
+                <input type="text" id="pincode" name="pincode" placeholder="Enter your pincode">
+            </div>
+
+            <button type="submit" class="submit-btn">Post Ad</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
