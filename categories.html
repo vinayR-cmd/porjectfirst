@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            /* background-color: #4CAF50; */
+            background-color: #87CEEB;
+            color: white;
+            padding: 10px 20px;
+            border-bottom: 3px groove midnightblue;
+
+        }
+
+        .mainheading {
+            font-size: xx-large;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: left;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -40px;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            /* font-size: 1rem; */
+            transition: color 0.3s;
+            font-size: medium;
+
+        }
+
+        .navbar ul li a:hover {
+            background-color: rgb(14, 55, 104);
+            padding: 3px;
+            border-radius: 5px;
+        }
+
+        .headings {
+            color: rgb(14, 55, 104);
+            font-size: x-large;
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+
+        .paras {
+            color: rgb(8, 8, 8);
+            margin-left: 30px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: larger;
+        }
+
+        .box {
+            /* background-color: #fff; */
+            background-color: mintcream;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            padding: 20px;
+            height: 100px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-left: 20px;
+            border: 2px solid midnightblue;
+        }
+
+        /* Hover effect for the box */
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Title inside the box */
+        .box h2 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Content inside the box */
+        .box p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .photo img {
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 5px solid midnightblue;
+        }
+
+        
+        .paras a {
+            text-decoration: none;
+            color: midnightblue;
+            font-size: larger;
+        }
+        .container {
+            display: flex; /* Use flexbox for horizontal layout */
+            gap: 20px; /* Space between each photo container */
+            padding: 20px;
+            
+        }
+
+        /* Styling for each photo container */
+        .photocontainer {
+            text-align: center;
+            width: 220px; /* Fixed width for each container */
+        }
+
+        /* Image styling */
+        .photocontainer img {
+            border-radius: 10px; /* Optional: rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+        }
+
+        /* Styling for the text paragraphs */
+        .paraso {
+            margin: 8px 0;
+            font-size: 14px;
+            color: #333;
+          
+        }
+
+        /* Styling for the link */
+        .paras a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .paras a:hover {
+            text-decoration: underline;
+        }
+        .manymore{
+            text-decoration: none;  
+        }
+       
+        .seeall{
+              margin-top: 300px;
+              margin-left: 30px;
+              color: rgb(8, 8, 8);
+              font-size: larger;
+        }
+        
+    #search {
+      color: #000;
+      border-radius: 8px;
+      border-style: ridge;
+      border-color: midnightblue;
+      border-style: ridge;
+      border-top-left-radius: 25px;
+      width: 250px;
+      border-width: 3px;
+      font-family: cursive;
+      margin-right: 10px;
+      font-size: medium;
+      padding-left: 10px;
+      background-color: aliceblue;
+      padding: 5px;
+    }
+
+    #search:hover {
+      background-color: rgb(200, 225, 239);
+    }
+
+    #name {
+      color: #000;
+      border-radius: 8px;
+      border-style: ridge;
+      border-color: midnightblue;
+      /* padding: 2px;
+      padding-top: 0%; */
+      width: 80px;
+      border-width: 3px;
+      font-family: cursive;
+      font-size: medium;
+      background-color: aliceblue;
+      padding: 5px;
+    }
+
+    #name:hover {
+      background-color: rgb(200, 225, 239);
+    }
+
+    #search-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+      
+      /* Optional: Adjust spacing above the search box */
+    }
+
+        
+          
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="conatainer">
+            <h1 class="mainheading">
+                Kitaab <span style="color: midnightblue; margin-left: 1%;"> Junction</span>
+
+            </h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+          <li><a href="exchange.html">EXCHANGE</a></li>
+          <li><a href="categories.html">CATEGORIES</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <form action="/search" method="GET" id="search-form">
+        <input type="text" name="query" placeholder="What you want to read?" required id="search">
+        <button type="submit" id="name">search</button>
+      </form>
+
+    <h2 class="headings">
+        "A Universe of Stories, One Exchange Away"
+    </h2>
+    <p class="paras">
+        Books have the incredible power to transport us to new worlds, spark our imagination, and broaden our horizons.
+        At Kitaab junction, we celebrate the magic of storytelling by connecting book lovers from all walks of life. Whether
+        you’re craving a spine-chilling mystery, a heartwarming romance, or an enlightening non-fiction journey, you’ll
+        find it here.
+    </p>
+    <p class="paras">Every book exchanged is a step toward building a community that values shared knowledge and
+        sustainability. By trading your beloved titles, you not only give them a new life but also discover stories that
+        might otherwise remain out of reach.</p>
+    <h2
+        style="display: flex; justify-content: center;color: rgb(14, 55, 104); font-size: x-large; margin-top: 15px; margin-left: 10px;margin-bottom: 15px; ">
+        CATEGORIES
+    </h2>
+    <div class="box">
+        <h2>Crime, Thriller & Mystery</h2>
+        <p style="color: black;font-size: larger;">280 Books</p>
+    </div>
+    <div class="container">
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/thriller1.jpg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Richard J. Garcia</p>
+            <p class="paraso">Price-- 300 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/thriller2.jpg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Arson</p>
+            <p class="paraso">Price-- 350 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank"style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/thriller3.webp" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Neil Tran</p>
+            <p class="paraso">Price-- 400 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/thriller5.jpg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Jeffrey Archer</p>
+            <p class="paraso">Price-- 350 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/thriller6.jpg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--NJ Mackey</p>
+            <p class="paraso">Price-- 300 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div>
+            <a href="https://www.amazon.in/s?k=books+bestsellers+english&crid=6JYEQYQMEP6K&sprefix=books+%2Caps%2C274&ref=nb_sb_ss_ts-doa-p_1_6" class="manymore" target="_blank"><p class="seeall">See all... </p></a>
+        </div>
+    
+    </div>
+    <div class="box">
+        <h2>Fictional</h2>
+        <p style="color: black;font-size: larger;">190 Books</p>
+    </div>
+    <div class="container">
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/fictional1.jpg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Olivia Wilson</p>
+            <p class="paraso">Price-- 550 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/fictional2.webp" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Olivia Wilson</p>
+            <p class="paraso">Price-- 500 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/fictional3.jpg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Neil </p>
+            <p class="paraso">Price-- 450 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/fictional4.jpeg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Mark Whiteway</p>
+            <p class="paraso">Price-- 550 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/fictional5.webp" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Olivia Wilson</p>
+            <p class="paraso">Price-- 650 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div>
+            <a href="https://www.amazon.in/s?k=books+bestsellers+english&crid=6JYEQYQMEP6K&sprefix=books+%2Caps%2C274&ref=nb_sb_ss_ts-doa-p_1_6" class="manymore" target="_blank"><p class="seeall">See all... </p></a>
+        </div>
+    </div>
+    <div class="box">
+        <h2>Childrens</h2>
+        <p style="color: black;font-size: larger;">235 Books</p>
+    </div>
+    <div class="container">
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/children1.webp" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Om singh</p>
+            <p class="paraso">Price-- 710 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/children2.webp" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Shialaja Menon</p>
+            <p class="paraso">Price-- 340 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/children3.webp" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Julia Denaldson</p>
+            <p class="paraso">Price-- 490 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/children4.jpeg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Daniel Errico</p>
+            <p class="paraso">Price-- 550 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/children5.jpg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Matt Buckingham</p>
+            <p class="paraso">Price-- 600 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div>
+            <a href="https://www.amazon.in/s?k=books+bestsellers+english&crid=6JYEQYQMEP6K&sprefix=books+%2Caps%2C274&ref=nb_sb_ss_ts-doa-p_1_6" class="manymore" target="_blank"><p class="seeall">See all... </p></a>
+        </div>
+    </div>
+    <div class="box">
+        <h2>Space Exploration and Sci-fi</h2>
+        <p style="color: black;font-size: larger;">123 Books</p>
+    </div>
+    <div class="container">
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/space1.jpeg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Peter M. Hamilton</p>
+            <p class="paraso">Price-- 615 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/space2.jpeg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Daniel Suarej</p>
+            <p class="paraso">Price-- 430 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/space3.jpg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Ray Lecara JR</p>
+            <p class="paraso">Price-- 490 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/space4.webp" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Adrian Tchaikovsky</p>
+            <p class="paraso">Price-- 550 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/space5.jpg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Ray Lecara JR</p>
+            <p class="paraso">Price-- 615 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div>
+            <a href="https://www.amazon.in/s?k=books+bestsellers+english&crid=6JYEQYQMEP6K&sprefix=books+%2Caps%2C274&ref=nb_sb_ss_ts-doa-p_1_6" class="manymore" target="_blank"><p class="seeall">See all... </p></a>
+        </div>
+    </div>
+    <div class="box">
+        <h2>Religion and Spirituality</h2>
+        <p style="color: black;font-size: larger;">225 Books</p>
+    </div>
+    <div class="container">
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/religion1.webp" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Jeniffer Tucker</p>
+            <p class="paraso">Price-- 600 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/religion2.webp" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Israel Sevanayagam</p>
+            <p class="paraso">Price-- 400 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/religion3.webp" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Roger Haight</p>
+            <p class="paraso">Price-- 450 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/religion4.jpg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--Hamaidreza Ayatollahy</p>
+            <p class="paraso">Price-- 510 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div class="photocontainer">
+            <div class="photo">
+                <img src="images/religion5.jpg" height="350px" width="220px">
+            </div>
+            <p class="paraso">Author--DR. Sukhraj S. Dhillon</p>
+            <p class="paraso">Price-- 350 Rupees</p>
+            <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank" style="text-decoration: none; color: midnightblue;">TO Buy </a> </p>
+        </div>
+        <div>
+            <a href="https://www.amazon.in/s?k=books+bestsellers+english&crid=6JYEQYQMEP6K&sprefix=books+%2Caps%2C274&ref=nb_sb_ss_ts-doa-p_1_6" class="manymore" target="_blank"><p class="seeall">See all... </p></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

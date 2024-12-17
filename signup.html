@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Kitaab Junction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #87CEEB;
+            color: white;
+            padding: 10px 20px;
+            border-bottom: 3px groove midnightblue;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .mainheading {
+            font-size: xx-large;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: left;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -40px;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+            font-size: medium;
+        }
+
+        .navbar ul li a:hover {
+            background-color: rgb(14, 55, 104);
+            padding: 3px;
+            border-radius: 5px;
+        }
+
+        /* Sign-Up Box Styles */
+        .signup-box {
+            background-color: #87CEEB;
+            border: 3px groove midnightblue;
+            border-radius: 10px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .signup-box h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: xx-large;
+        }
+
+        .signup-box label {
+            color: white;
+            font-size: medium;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .signup-box input[type="text"],
+        .signup-box input[type="email"],
+        .signup-box input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .signup-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(14, 55, 104);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: medium;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .signup-box button:hover {
+            background-color: midnightblue;
+        }
+
+        .signup-box p {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .signup-box p a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .signup-box p a:hover {
+            color: midnightblue;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="mainheading">
+                Kitaab <span style="color: midnightblue; margin-left: 1%;">Junction</span>
+            </h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="exchange.html">EXCHANGE</a></li>
+                    <li><a href="categories.html">CATEGORIES</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="signup-box">
+        <h2>Sign Up</h2>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <button type="submit">Sign Up</button>
+            
+        </form>
+    </div>
+</body>
+</html>

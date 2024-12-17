@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    .header {
+      /* background-color: #4CAF50; */
+      /* background-color: rgb(165, 212, 115); */
+      background-color: #87CEEB;
+      color: white;
+      padding: 10px 20px;
+      border-bottom: 3px groove midnightblue;
+
+    }
+
+    .mainheading {
+      font-size: xx-large;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: left;
+      padding: 10px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -40px;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+      margin-right: 20px;
+
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      /* font-size: 1rem; */
+      transition: color 0.3s;
+      font-size: medium;
+
+    }
+
+    .navbar ul li a:hover {
+      background-color: rgb(14, 55, 104);
+      padding: 3px;
+      border-radius: 5px;
+    }
+
+    #search {
+      color: #000;
+      border-radius: 8px;
+      border-style: ridge;
+      border-color: midnightblue;
+      border-style: ridge;
+      border-top-left-radius: 25px;
+      width: 250px;
+      border-width: 3px;
+      font-family: cursive;
+      margin-right: 10px;
+      font-size: medium;
+      padding-left: 10px;
+      background-color: aliceblue;
+      padding: 5px;
+    }
+
+    #search:hover {
+      background-color: rgb(200, 225, 239);
+    }
+
+    #name {
+      color: #000;
+      border-radius: 8px;
+      border-style: ridge;
+      border-color: midnightblue;
+      /* padding: 2px;
+      padding-top: 0%; */
+      width: 80px;
+      border-width: 3px;
+      font-family: cursive;
+      font-size: medium;
+      background-color: aliceblue;
+      padding: 5px;
+    }
+
+    #name:hover {
+      background-color: rgb(200, 225, 239);
+    }
+
+    #search-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+
+      /* Optional: Adjust spacing above the search box */
+    }
+
+    #video {
+      margin-left: 50px;
+      border-radius: 10px;
+      border: 5px solid midnightblue;
+      margin-top: 20px;
+      height: 300px;
+      width: 1000px;
+    }
+
+    #secondheading {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 15px;
+      color: rgb(14, 55, 104);
+      font-style: normal;
+      font-size: xx-large;
+    }
+
+    .parahead {
+      color: rgb(14, 55, 104);
+      font-size: xx-large;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+    .paragraph {
+      color: rgb(8, 8, 8);
+      font-size: large;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+
+    #list {
+      color: rgb(8, 8, 8);
+      font-size: large;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+
+    #list li {
+      margin-top: 10px;
+      margin-left: 15px;
+    }
+
+    .head {
+      color: rgb(14, 55, 104);
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+
+    .card-title {
+      font-size: large;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      color: #555;
+      font-size: medium;
+    }
+
+    #image {
+      height: 150px;
+      width: 200px;
+      margin-top: 100px;
+      margin-right: 300px
+    }
+
+    .logo {
+      margin-right: 5px;
+      margin-left: 10px;
+    }
+
+    .logo img {
+      border-radius: 10px;
+    }
+
+    .foot {
+      color: midnightblue;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 10px;
+      margin-left: 10px;
+    }
+
+    .ele {
+      color: rgb(13, 1, 1);
+      font-size: larger;
+      text-decoration: none;
+      margin-left: 10px;
+
+    }
+
+    .ele a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .copyright {
+      font-size: large;
+      color: midnightblue;
+      background-color: midnightblue;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      /* Creates space between the two sections */
+      text-align: left;
+      margin-top: 20px;
+      /* background-color: rgb(165, 212, 115); */
+      background-color: #87CEEB;  
+      height: 120px;
+      padding-top: 10px;
+      border-top: 4px solid midnightblue;
+
+    }
+
+    .footer-container h3 {
+      text-decoration: none;
+    }
+
+    .ele a :hover {
+      color: rgb(220, 200, 20);
+
+    }
+
+    .social {
+      display: flex;
+
+    }
+
+    .social img {
+      height: 50px;
+      width: 50px;
+      margin-right: 15px;
+    }
+
+    .copyright {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: midnightblue;
+      color: azure;
+      padding-bottom: 10px;
+      padding-top: 10px;
+
+
+    }
+
+    .box {
+      /* background-color: #fff; */
+      background-color: mintcream;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      padding: 20px;
+      height: 100px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-left: 20px;
+      border: 2px solid midnightblue;
+      margin-top: 20px;
+    }
+
+    /* Hover effect for the box */
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Title inside the box */
+    .box h2 {
+      color: #2c3e50;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* Content inside the box */
+    .box p {
+      color: #7f8c8d;
+      font-size: 14px;
+    }
+
+    .contentbox {
+      display: flex;
+
+    }
+
+    #explore {
+      text-decoration: none;
+      color: midnightblue;
+      font-size: large;
+      margin-top: 320px;
+      margin-left: 20px;
+    }
+    
+    .photo img {
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 5px solid midnightblue;
+        }
+
+        
+        .paras a {
+            text-decoration: none;
+            color: midnightblue;
+            font-size: larger;
+        }
+        .piccontainer {
+            display: flex; /* Use flexbox for horizontal layout */
+            gap: 20px; /* Space between each photo container */
+            padding: 20px;
+            
+        }
+
+        /* Styling for each photo container */
+        .photocontainer {
+            text-align: center;
+            width: 220px; /* Fixed width for each container */
+        }
+
+        /* Image styling */
+        .photocontainer img {
+            border-radius: 10px; /* Optional: rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+        }
+
+        /* Styling for the text paragraphs */
+        .paraso {
+            margin: 8px 0;
+            font-size: 14px;
+            color: #333;
+        }
+        .paraso a{
+          text-decoration: none;
+          color: midnightblue;
+          font-size: medium;
+        }
+        .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    #submit-btn {
+      padding: 10px 20px;
+      background-color: #87CEEB;
+      border:  2px solid midnightblue;
+      border-radius: 5px;
+      font-size: medium;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-left: 1200px;
+      text-decoration: none;
+    }
+    #submit-btn a{
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      color: rgb(0, 0, 0);
+    }
+
+    #submit-btn:hover {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="conatainer">
+      <h1 class="mainheading">
+        Kitaab <span style="color: midnightblue; margin-left: 1%;"> Junction</span>
+
+      </h1>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="exchange.html">EXCHANGE</a></li>
+          <li><a href="categories.html">CATEGORIES</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div>
+
+    <h2 id="secondheading">
+      Discover Stories, Share Yours: The Ultimate Book Swap!
+    </h2>
+    <div class="container">
+      <h2 style="color: midnightblue; font-size: xx-large; margin-bottom: 10px;">Why To Exchange Books?</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon">📖</div>
+          <div class="card-title">Simple</div>
+          <div class="card-text">Kitaab junction is a simple-to-use platform that is easy for booklovers of all age groups...
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🐖</div>
+          <div class="card-title">Save</div>
+          <div class="card-text">Reduce the cost of books to a fraction of their original price. Save money when you
+            exchange!</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔄</div>
+          <div class="card-title">Socialise</div>
+          <div class="card-text">Rediscover the joy of sharing books and meeting like-minded book enthusiasts!</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">✅</div>
+          <div class="card-title">Convenient</div>
+          <div class="card-text">We deliver books to your doorstep, making the process seamless and eco-friendly.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌍</div>
+          <div class="card-title">Less Carbon Footprint</div>
+          <div class="card-text">Help the environment by reducing waste and reusing books.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">➕</div>
+          <div class="card-title">Less for More</div>
+          <div class="card-text">Exchange your old books for new treasures at just the cost of shipping.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">📚</div>
+          <div class="card-title">Less Clutter</div>
+          <div class="card-text">Free up space and keep your books in circulation by sharing them with others.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌲</div>
+          <div class="card-title">Less Paper, More Trees</div>
+          <div class="card-text">Reduce paper usage and contribute to a greener planet.</div>
+        </div>
+      </div>
+    </div>
+    
+    <h2 class="parahead"> NEW IN COLLECTION</h2>
+    <div class="piccontainer">
+      <div class="photocontainer">
+          <div class="photo">
+              <img src="images/new3.webp" height="350px" width="220px">
+          </div>
+          <p class="paraso">Author--Dean Koontz</p>
+          <p class="paraso">Price-- 800 Rupees</p>
+          <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank">TO Buy </a> </p>
+          <mark>Only 3 remaining </mark>
+      </div>
+      <div class="photocontainer">
+          <div class="photo">
+              <img src="images/new4.jpeg" height="350px" width="220px">
+          </div>
+          <p class="paraso">Author--Lynden Renwick</p>
+          <p class="paraso">Price-- 750 Rupees</p>
+          <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank">TO Buy </a> </p>
+          <mark>Only 2 remaining</mark>
+      </div>
+      <div class="photocontainer">
+          <div class="photo">
+              <img src="images/new1.webp" height="350px" width="220px">
+          </div>
+          <p class="paraso">Author--Estelly Darcy</p>
+          <p class="paraso">Price-- 650 Rupees</p>
+          <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank">TO Buy </a> </p>
+      </div>
+      <div class="photocontainer">
+          <div class="photo">
+              <img src="images/new5.webp" height="350px" width="220px">
+          </div>
+          <p class="paraso">Author--Jeffrey Archer</p>
+          <p class="paraso">Price-- 720 Rupees</p>
+          <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank">TO Buy </a> </p>
+          <mark>Only 4 remaining</mark>
+      </div>
+      <div class="photocontainer">
+          <div class="photo">
+              <img src="images/new2.jpeg" height="350px" width="220px">
+          </div>
+          <p class="paraso">Author--Toni Faggioli</p>
+          <p class="paraso">Price-- 780 Rupees</p>
+          <p class="paraso"><a href="https://www.amazon.in/s?k=books&crid=269433ZR0L5KB&sprefix=books%2Caps%2C256&ref=nb_sb_noss_2" target="_blank">TO Buy </a> </p>
+      </div>
+      <a href="categories.html" id="explore"> EXPLORE MORE...</a>
+    </div>
+
+  
+  </div>
+
+  <div>
+    
+    <h2 class="parahead">
+      What it does?
+    </h2>
+    <ul id="list">
+      <li>Browse a diverse collection of books listed by other users.</li>
+      <li>View detailed information about each book, including author, description, and cover image fetched from the
+        Google API.</li>
+      <li>Browse other users' profiles to explore their book listings.</li>
+      <li>Contact other users using their contact details or directly send them personalised mail.</li>
+      <li>Manage their own book listings in a user-friendly dashboard.</li>
+      <li>Utilize advanced search functionality to find specific books of interest.</li>
+      <li>Maintain a user profile with contact information and list books for exchange.</li>
+    </ul>
+  </div>
+
+  <div><br><br>
+
+    <h2 id="secondheading">
+      How to SELL your old books online on Kitaab Junction?
+    </h2>
+    <div class="container">
+      <h2 style="color: midnightblue; font-size: xx-large; margin-bottom: 10px;">Earning money by selling your old books is just <strong>3 steps</strong> away from you!</h2><br><br>
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon">📢</div>
+          <div class="card-title">Step 1</div>
+          <div class="card-text">Post an ad on Kitaab junction describing your book details to sell your old books online.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">💸</div>
+          <div class="card-title">Step 2</div>
+          <div class="card-text">Set the selling price for your books at which you want to sell them</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">💳</div>
+          <div class="card-title">Step 3</div>
+          <div class="card-text">Get paid into your UPI/Bank account once you receive an order for your book.</div>
+        </div>
+        
+      </div>
+    </div>
+    <br><br>
+    <button id="submit-btn"><a href="exchange.html">To exchange</a></button>
+    
+    <div>
+        <h2 class="parahead">Inspiration</h2>
+        <p class="paragraph">
+          The inspiration behind BookSwap was to create a platform that fosters knowledge sharing and community building
+          through book exchanges. We wanted to address the common issue of unused books sitting on shelves while others
+          could benefit from them. Additionally, we aimed to encourage sustainable practices by promoting the reuse of
+          books, reducing waste, and making reading more accessible to everyone.
+        </p></div>
+
+        
+      
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px; gap: 20px;">
+      <iframe width="1000px" height="400px" src="https://www.youtube.com/embed/Bjt9c_XLQ1Q?si=aKlC0ZyL6R1GHYWr"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="video"></iframe>
+      <img src="images/download.avif" height="315" width="560" alt="Image 1">
+      <a href="https://play.google.com/store/apps?hl=en_IN" target="_blank"><img src="images/download2.webp"
+          height="315" width="315" id="image" alt="Image 2"></a>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-container">
+      <div>
+        <dl>
+          <dt>
+            <h3 class="foot">
+              IMFORMATION
+            </h3>
+          <dd class="ele"><a href="#" target="_blank">PRIVACY POLICY</a></dd>
+          <dd class="ele"><a href="#" target="_blank">TERMS AND CONDITIONS</dd>
+          <dd class="ele"><a href="#" target="_blank">FAQs</dd>
+          </dt>
+        </dl>
+      </div>
+      <div>
+        <div>
+          <h3 class="foot">
+            SOCIAL
+          </h3>
+        </div>
+        <div class="social">
+          <p>
+            <a class="logo" href="https://www.instagram.com/" target="_blank"><img src="images/insta.webp" height="50px"
+                width="50px"></a>
+          </p>
+          <p style="display: inline;">
+            <a class="logo" href="https://www.facebook.com/" target="_blank"><img src="images/facebook.webp"
+                height="50px" width="50px"></a>
+          </p>
+          <p style="display: inline;">
+            <a class="logo" href="https://web.whatsapp.com/" target="_blank"><img src="images/WhatsApp.svg.webp"
+                height="50px" width="50px"></a>
+          </p>
+          <p style="display: inline;">
+            <a class="logo" href="https://x.com/__x" target="_blank"><img src="images/x.jpg" height="50px"
+                width="50px"></a>
+          </p>
+        </div>
+      </div>
+      <div class="Container">
+        <h3 class="foot">
+          CONTACT US
+        </h3>
+        <p class="ele">
+          New South Block , Phase 8B , 160055
+        </p>
+        <p class="ele">
+          9049772322
+        </p>
+        <p class="ele">
+          kitaabjunction@gmail.com
+        </p>
+
+      </div>
+
+    </div>
+    <p class="copyright"> Copyright &copy; 2024 Kitaab Junction. All rights reserved.</p>
+
+  </footer>
+
+
+
+</body>
+
+</html>
